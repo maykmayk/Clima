@@ -38,17 +38,14 @@ search.addEventListener('click', () => {
                 case 1000:
                     image.src = 'images/clear.png';
                     break;
-            
                 case 1003:
                     image.src = 'images/cloud.png';
                     break;
-            
                 case 1030:
                 case 1135:
                 case 1147:
                     image.src = 'images/mist.png';
                     break;
-            
                 case 1063:
                 case 1087:
                 case 1150:
@@ -65,7 +62,6 @@ search.addEventListener('click', () => {
                 case 1243:
                     image.src = 'images/rain.png';
                     break;
-            
                 case 1066:
                 case 1114:
                 case 1117:
@@ -78,11 +74,12 @@ search.addEventListener('click', () => {
                 case 1237:
                     image.src = 'images/snow.png';
                     break;
-            
-                case 404:
+                case 2000:
+                    image.src = 'images/thunder.png';
+                    break;
+                default:
                     image.src = 'images/404.png';
                     break;
-            
             }
 
             temperature.innerHTML = `${parseInt(json.current.temp_c)}<span>°C</span>`;
