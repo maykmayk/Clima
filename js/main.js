@@ -23,6 +23,7 @@ document.addEventListener("keyup", (event) => {
                 const wind = document.querySelector(".wind")
                 const hum = document.querySelector(".humidity")
                 const uv = document.querySelector(".uvIndex")
+                let hourIcon = ""
                 // const description = document.querySelector('.weather-box .description');
                 // const humidity = document.querySelector('.weather-details .humidity span');
       
