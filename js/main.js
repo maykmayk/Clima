@@ -28,15 +28,15 @@ document.addEventListener("keyup", (event) => {
       
                 switch (json.current.condition.code) {
                     case 1000:
-                        hourIcon = '../asset/images/clear.png';
+                        hourIcon = '/Clima/asset/images/clear.png';
                         break;
                     case 1003:
-                        hourIcon = '../asset/images/cloud.png';
+                        hourIcon = '/Clima/asset/images/cloud.png';
                         break;
                     case 1030:
                     case 1135:
                     case 1147:
-                        hourIcon = '../asset/images/mist.png';
+                        hourIcon = '/Clima/asset/images/mist.png';
                         break;
                     case 1063:
                     case 1087:
@@ -52,7 +52,7 @@ document.addEventListener("keyup", (event) => {
                     case 1201:
                     case 1240:
                     case 1243:
-                        hourIcon = '../asset/images/rain.png';
+                        hourIcon = '/Clima/asset/images/rain.png';
                         break;
                     case 1066:
                     case 1114:
@@ -64,13 +64,13 @@ document.addEventListener("keyup", (event) => {
                     case 1222:
                     case 1225:
                     case 1237:
-                        hourIcon = '../asset/images/snow.png';
+                        hourIcon = '/Clima/asset/images/snow.png';
                         break;
                     case 2000:
-                        hourIcon = '../asset/images/thunder.png';
+                        hourIcon = '/Clima/asset/images/thunder.png';
                         break;
                     default:
-                        hourIcon = '../asset/images/404.png';
+                        hourIcon = '/Clima/asset/images/404.png';
                         break;
                 }
       
@@ -98,15 +98,15 @@ document.addEventListener("keyup", (event) => {
                 let hourIcon = "";
                 switch (json.current.condition.code) {
                     case 1000:
-                        hourIcon = '../asset/images/clear.png';
+                        hourIcon = '/Clima/asset/images/clear.png';
                         break;
                     case 1003:
-                        hourIcon = '../asset/images/cloud.png';
+                        hourIcon = '/Clima/asset/images/cloud.png';
                         break;
                     case 1030:
                     case 1135:
                     case 1147:
-                        hourIcon = '../asset/images/mist.png';
+                        hourIcon = '/Clima/asset/images/mist.png';
                         break;
                     case 1063:
                     case 1087:
@@ -122,7 +122,7 @@ document.addEventListener("keyup", (event) => {
                     case 1201:
                     case 1240:
                     case 1243:
-                        hourIcon = '../asset/images/rain.png';
+                        hourIcon = '/Clima/asset/images/rain.png';
                         break;
                     case 1066:
                     case 1114:
@@ -134,13 +134,13 @@ document.addEventListener("keyup", (event) => {
                     case 1222:
                     case 1225:
                     case 1237:
-                        hourIcon = '../asset/images/snow.png';
+                        hourIcon = '/Clima/asset/images/snow.png';
                         break;
                     case 2000:
-                        hourIcon = '../asset/images/thunder.png';
+                        hourIcon = '/Clima/asset/images/thunder.png';
                         break;
                     default:
-                        hourIcon = '../asset/images/404.png';
+                        hourIcon = '/Clima/asset/images/404.png';
                         break;
                 }
 
