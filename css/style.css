@@ -1,192 +1,83 @@
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
+@font-face {
+    font-family: "FreeSans";
+    src: url("../asset/font/FreeSans.ttf");
+}
+
+body {
+    background-color: #0E141C;
+    font-family: "FreeSans";
+    color: #eee;
+}
+
+.searchBar {
+    background-color: #1D2634;
+    border: none;
     outline: none;
-    box-sizing: border-box;
+    color: #eee;
+    min-height: 5vh;
+    border-radius: 15px;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    margin-top: 50px;
-    /* align-items: center; */
-    justify-content: center;
-    background: #f1faee;
+.hero{
+    min-height: 25vh;
 }
 
-.container{
-    position: relative;
-    width: 400px;
-    height: 105px;
-    background: #e63946;
-    padding: 28px 32px;
-    overflow: hidden;
-    border-radius: 18px;
-    font-family: 'Roboto', sans-serif;
-    transition: 0.6s ease-out;
+.today {
+    min-height: 25vh;
+    background-color: #1D2634;
+    border-radius: 15px;
 }
 
-.search-box{
-    width: 100%;
-    height: min-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.airCondition {
+    min-height: 25vh;
+    background-color: #1D2634;
+    border-radius: 15px;
 }
 
-.search-box input{
-    background-color: transparent;
-    color: #f1faee;
-    width: 80%;
-    font-size: 24px;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding-left: 32px;
+.iconWeath{
+    max-height: 20vh;
 }
 
-.search-box input::placeholder{
-    font-size: 20px;
-    font-weight: 500;
-    color: #f1faee;
-    text-transform: capitalize;
+.city {
+    font-size: 40px;
+    font-weight: 900;
 }
 
-.search-box button{
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    color: #f1faee;
-    /* background: #dff6ff; */
-    border-radius: 50%;
-    font-size: 22px;
-    transition: 0.4s ease;
-    background-color: transparent;
+.location{
+    font-size: 15px;
 }
 
-.search-box button:hover{
-    color: #f1faee;
-    /* background: #f1faee; */
-    border: 1px solid #f1faee;
+.grad{
+    font-size: 50px;
+    font-weight: 900;
 }
 
-.search-box i{
-    position: absolute;
-    color: #f1faee;
-    font-size: 28px;
+.littleTitle{
+    font-size: 11px;
 }
 
-.weather-box{
-    text-align: center;
+.airCondTitle{
+    font-size: 15px;
 }
 
-.weather-box img{
-    width: 60%;
-    margin-top: 30px;
+.realFeelIcon{
+    min-width: 30px;
 }
 
-.weather-box .temperature{
-    position: relative;
-    color: #f1faee;
-    font-size: 4rem;
-    font-weight: 800;
-    margin-top: 30px;
-    margin-left: -16px;
+.topicCond{
+    font-size: 35px;
+    font-weight: 900;
 }
 
-.weather-box .temperature span{
-    position: absolute;
-    margin-left: 4px;
-    font-size: 1.5rem;
+#tempTF{
+    font-size: 25px;
+    font-weight: 900;
 }
 
-.weather-box .description{
-    color: #f1faee;
-    font-size: 22px;
-    font-weight: 500;
-    text-transform: capitalize;
+#forecastIcon{
+    max-width: 100px;
 }
 
-.weather-details{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-}
-
-.weather-details .humidity, .weather-details .wind{
-    display: flex;
-    align-items: center;
-    width: 50%;
-    height: 100px;
-}
-
-.weather-details .humidity{
-    padding-left: 20px;
-    justify-content: flex-start;
-}
-
-.weather-details .wind{
-    padding-right: 20px;
-    justify-content: flex-end;
-}
-
-.weather-details i{
-    color: #f1faee;
-    font-size: 26px;
-    margin-right: 10px;
-    margin-top: 6px;
-}
-
-.weather-details span{
-    color: #f1faee;
-    font-size: 22px;
-    font-weight: 500;
-}
-
-.weather-details p{
-    color: #f1faee;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.not-found{
-    width: 100%;
-    text-align: center;
-    margin-top: 50px;
-    scale: 0;
-    opacity: 0;
-    display: none;
-}
-
-.not-found img{
-    width: 70%;
-}
-
-.not-found p{
-    color: #f1faee;
-    font-size: 22px;
-    font-weight: 500;
-    margin-top: 12px;
-}
-
-.weather-box, .weather-details{
-    scale: 0;
-    opacity: 0;
-}
-
-.fadeIn{
-    animation: 0.5s fadeIn forwards;
-    animation-delay: 0.5s;
-}
-
-@keyframes fadeIn{
-    to {
-        scale: 1;
-        opacity: 1;
-    }
-}
-
-.textCenter{
-    color: #f1faee;
+.rightBar{
+    background-color: #1D2634;
 }
