@@ -75,6 +75,7 @@ document.addEventListener("keyup", (event) => {
                 }
       
                 temperature.innerHTML = `${parseInt(json.current.temp_c)}°`;
+                image.src = `$${hourIcon}°`;
                 console.log(json)
                 city.innerHTML = `${(json.location.name)}`;
                 desc.innerHTML = `${(json.location.region)}, ${(json.location.country)}`;
