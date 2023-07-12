@@ -7,13 +7,10 @@ document.addEventListener("keyup", (event) => {
         const APIKey = 'd2b3948becd14a23bc9172940231007';
         const city = document.querySelector('.searchBar').value;
       
-        if (city === '')
-            return;
       
         fetch(`https://api.weatherapi.com/v1/forecast.json?key=${APIKey}&q=${city}&aqi=no`)
             .then(response => response.json())
             .then(json => {
-      
                 const image = document.querySelector('.iconWeath');
                 const temperature = document.querySelector('.grad');
                 const city = document.querySelector('.city');
@@ -91,7 +88,11 @@ document.addEventListener("keyup", (event) => {
                 // description.innerHTML = `${json.current.condition.text}`;
                 // humidity.innerHTML = `${json.current.humidity}%`;
                 // wind.innerHTML = `${parseInt(json.current.wind_kph)}Km/h`;
-        });
+        
+            }).catch(err => {
+                alert('Something was wrong :(', err);
+                return;
+            });
 
         for (let i = 1; i <= 6; i++) {
             fetch(`https://api.weatherapi.com/v1/forecast.json?key=${APIKey}&q=${city}&days=1&hour=${i*3+3}`)
