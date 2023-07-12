@@ -2,6 +2,14 @@ const search = document.querySelector('.search-box button');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 
+const date = new Date();
+const time = date.toLocaleTimeString('it-IT', { hour12: false }).slice(0, -3);
+const day = date.toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: '2-digit' });
+const formattedDateTime = `${time} - ${day.replace(/\//g, '/')}`;
+const dayCont = document.querySelector('.day');
+dayCont.innerHTML = `${formattedDateTime}`;
+
+
 document.addEventListener("keyup", (event) => {
     if (event.key === "Enter") {
         const APIKey = 'd2b3948becd14a23bc9172940231007';
@@ -74,18 +82,19 @@ document.addEventListener("keyup", (event) => {
                         break;
                 }
       
+                
+
                 temperature.innerHTML = `${parseInt(json.current.temp_c)}°`;
                 image.src = `${todayIcon}`;
-                console.log(json)
                 city.innerHTML = `${(json.location.name)}`;
                 desc.innerHTML = `${(json.location.region)}, ${(json.location.country)}`;
                 realfeel.innerHTML = `${(json.current.feelslike_c)}°`;
-                wind.innerHTML = `${(json.current.wind_mph)} km/h`;
-                hum.innerHTML = `${(json.current.humidity)}%`;
+                wind.innerHTML = `${(json.current.wind_mph)}<span class="infoForecast"> km/h</span>`;
+                hum.innerHTML = `${(json.current.humidity)}<span class="infoForecast"> %</span>`;
                 uv.innerHTML = `${(json.current.uv)}`;
                 for (let i = 0; i < 2; i++) {     
-                    sunrise[i].innerHTML = `${(json.forecast.forecastday[0].astro.sunrise)}`;
-                    sunset[i].innerHTML = `${(json.forecast.forecastday[0].astro.sunset)}`;
+                    sunrise[i].innerHTML = `${(json.forecast.forecastday[0].astro.sunrise.slice(0,5))}<span class="infoForecast"> AM</span>`;
+                    sunset[i].innerHTML = `${(json.forecast.forecastday[0].astro.sunset.slice(0,5))}<span class="infoForecast"> PM</span>`;
                 }
                 // description.innerHTML = `${json.current.condition.text}`;
                 // humidity.innerHTML = `${json.current.humidity}%`;

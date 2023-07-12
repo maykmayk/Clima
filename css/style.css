@@ -18,6 +18,10 @@ body {
     border-radius: 15px;
 }
 
+.day {
+    white-space: nowrap;
+}
+
 .hero{
     min-height: 25vh;
 }
@@ -67,6 +71,19 @@ body {
 .topicCond{
     font-size: 35px;
     font-weight: 900;
+}
+
+.infoForecast{
+    font-size: 12px;
+}
+
+.darkLight{
+    border-radius: 50%;
+    max-width: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    min-height: 35px;
+    background-color: #1D2634;
 }
 
 #tempTF{
