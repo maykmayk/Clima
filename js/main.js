@@ -10,7 +10,7 @@ document.addEventListener("keyup", (event) => {
         if (city === '')
             return;
       
-        fetch(`https://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${city}&aqi=no`)
+        fetch(`https://api.weatherapi.com/v1/forecast.json?key=${APIKey}&q=${city}&aqi=no`)
             .then(response => response.json())
             .then(json => {
       
@@ -23,6 +23,8 @@ document.addEventListener("keyup", (event) => {
                 const wind = document.querySelector(".wind")
                 const hum = document.querySelector(".humidity")
                 const uv = document.querySelector(".uvIndex")
+                const sunset = document.querySelector(".sunset")
+                const sunrise = document.querySelector(".sunrise")
                 let todayIcon = "";
                 // const description = document.querySelector('.weather-box .description');
                 // const humidity = document.querySelector('.weather-details .humidity span');
@@ -84,6 +86,8 @@ document.addEventListener("keyup", (event) => {
                 wind.innerHTML = `${(json.current.wind_mph)} km/h`;
                 hum.innerHTML = `${(json.current.humidity)}%`;
                 uv.innerHTML = `${(json.current.uv)}`;
+                sunrise.innerHTML = `${(json.forecast.forecastday[0].astro.sunrise)}`;
+                sunset.innerHTML = `${(json.forecast.forecastday[0].astro.sunset)}`;
                 // description.innerHTML = `${json.current.condition.text}`;
                 // humidity.innerHTML = `${json.current.humidity}%`;
                 // wind.innerHTML = `${parseInt(json.current.wind_kph)}Km/h`;
